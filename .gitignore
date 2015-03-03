@@ -4,3 +4,4 @@ app/config/production.json
 app/node_modules
 twitter_credentials.yml
 provisioning/inventories/production
+provisioning/roles/common/files/public_key

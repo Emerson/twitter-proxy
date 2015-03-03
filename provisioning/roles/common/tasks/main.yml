@@ -8,6 +8,14 @@
 - name: Add user deploy
   user: name=deploy group=deploy shell=/bin/bash generate_ssh_key=yes ssh_key_comment=deploy
 
+- name: Add authorized keys for deploy
+  authorized_key: user=deploy
+                  key="{{ item }}"
+  with_file:
+    - public_key
+  when: ansible_ssh_user != 'vagrant'
+
 - name: add passwordless sudo for users
   lineinfile: "dest=/etc/sudoers state=present line='{{ item }} ALL=(ALL) NOPASSWD: ALL'"
   with_items: sudoers
+
