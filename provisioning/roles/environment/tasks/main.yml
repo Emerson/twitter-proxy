@@ -1,0 +1,15 @@
+---
+
+- include_vars: ../twitter_credentials.yml
+
+- name: Make the consumer key available to the environment
+  lineinfile: dest=/etc/environment line="TWITTER_CONSUMER_KEY={{consumer_key}}"
+
+- name: Make the consumer secret available to the environment
+  lineinfile: dest=/etc/environment line="TWITTER_CONSUMER_SECRET={{consumer_secret}}"
+
+- name: Make the access key available to the environment
+  lineinfile: dest=/etc/environment line="TWITTER_ACCESS_TOKEN_KEY={{access_token_key}}"
+
+- name: Make the access secret available to the environment
+  lineinfile: dest=/etc/environment line="TWITTER_ACCESS_TOKEN_SECRET={{access_token_secret}}"

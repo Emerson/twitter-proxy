@@ -1,0 +1,10 @@
+{
+  "server": {
+    "port": 3000
+  },
+  "messages": {
+    "server_error": "The server encountered an error while processing the request.",
+    "service_unavailable": "The service is temprarily unavailable. Please try again later.",
+    "uri_not_found": "The requested URI does not exist."
+  }
+}

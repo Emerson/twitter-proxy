@@ -1,0 +1,8 @@
+---
+
+- name: Ensure nodemon is installed for development
+  npm: name=nodemon global=yes state=latest
+
+# TODO: Find a way to automatically start nodemon
+# - name: Start the application
+#   command: chdir=/home/deploy/twitter-proxy/ noup nodemon index.js &

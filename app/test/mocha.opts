@@ -1,0 +1,4 @@
+test/unit
+--reporter spec
+--require test/spec_helper.js
+--recursive

@@ -1,0 +1,5 @@
+- name: Install common Node.js packages
+  npm: name={{item}} global=yes
+  with_items:
+    - pm2
+    - mocha

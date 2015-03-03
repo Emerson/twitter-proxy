@@ -1,0 +1,11 @@
+---
+- name: Provision server
+  hosts: all
+  sudo: true
+  roles:
+    - { role: environment, tags: environment}
+    - { role: common, tags: common }
+    - { role: nodesource.node, tags: nodejs }
+    - { role: npm, tags: npm }
+    - { role: nginx, tags: nginx }
+    - { role: nodemon, tags: nodemon, when: ansible_ssh_user == 'vagrant'}
