@@ -30,7 +30,7 @@
       host : "104.236.252.229",
       ref  : "origin/master",
       repo : "https://github.com/Emerson/twitter-proxy.git",
-      path : "/home/deploy/twitter-proxy/app",
+      path : "/home/deploy/twitter-proxy",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production"
     }
   }
