@@ -27,7 +27,7 @@
   deploy : {
     production : {
       user : "deploy",
-      host : "xxx.xxx.xxx.xxx",
+      host : "104.236.252.229",
       ref  : "origin/master",
       repo : "https://github.com/Emerson/twitter-proxy.git",
       path : "/home/deploy/twitter-proxy",
