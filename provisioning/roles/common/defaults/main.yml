@@ -1,3 +1,4 @@
 common_apt_packages:
   - build-essential
   - curl
+  - git
